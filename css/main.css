@@ -1,0 +1,33 @@
+
+
+.menuDropdown {
+    border-radius: 5%;
+}
+
+#navbarNavModels, #navbarNavDropdown {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.main-header {
+    background: url(../img/hero-bg.jpg);
+    height: 700px;
+}
+
+#btnAdd {
+    width: 70%;
+    font-size: 20px;
+}
+
+#prize {
+    font-size: 26px;
+}
+
+#prize2 {
+    font-size: 18px;
+}
+
+.container {
+    height: 100%;
+    width: 100%;
+}
