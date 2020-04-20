@@ -45,6 +45,20 @@
     padding-left: 0;
 }       
 
-#product-right {
-    margin-left: 200px;
+#mainCustom {
+    background: #F6F9FC;
+}
+
+#ListFooter a:link,
+#ListFooter a:visited,
+#ListFooter a:active{
+    color: darkgray; 
+    
+}
+#ListFooter a:hover{
+    color: white;
+}
+
+#text-footer {
+    color: darkgray
 }
