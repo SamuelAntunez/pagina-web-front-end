@@ -60,5 +60,25 @@
 }
 
 #text-footer {
+    color: gray
+}
+
+#shopNav a:link,
+#shopNav a:visited,
+#shopNav a:active {
     color: darkgray
+}
+
+#shopNav a:hover {
+    color: darkorange;
+}
+
+#shopNav {
+    text-decoration: none;
+    padding-left: 0;
+    list-style: none;
+}
+
+#shopNavbar {
+    
 }
