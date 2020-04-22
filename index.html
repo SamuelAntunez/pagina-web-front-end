@@ -8,13 +8,15 @@
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
- 
+    <!-- Alertify -->
+    <link rel="stylesheet" href="alertifyjs (1)/css/alertify.css">
+    <link rel="stylesheet" href="alertifyjs (1)/css/themes/default.css">
 </head>
 <body>
 
     <!-- NAV -->
     <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: black;">
-      <div class="container"><a class="navbar-brand d-none d-sm-block mr-4 order-lg-1" href="index.html" style="min-width: 7rem;"><img width="142" src="img/logo-light.png" alt="Cartzilla"></a><a class="navbar-brand d-sm-none mr-2 order-lg-1" href="index.html" style="min-width: 4.625rem;"><img width="74" src="img/logo-icon-light.png" alt="Cartzilla"></a>
+      <div class="container"><a class="navbar-brand d-none d-sm-block mr-4 order-lg-1" href="index.html" style="min-width: 7rem;"><img width="142" src="img/logo-light.png" alt="Cartzilla"></a>
         <div class="navbar-toolbar d-flex align-items-center order-lg-3">
           <button class="navbar-toggler mr-2" type="button" data-toggle="collapse" data-target="#navbarCollapse"><span class="navbar-toggler-icon"></span></button>
           <a href="#" class="btn btn-outline-dark nav-link mr-2"><i class="far fa-user"></i></a>
@@ -217,14 +219,41 @@
     <section class="main-section py-5">
       <div class="container">
         <div class="row">
-          <div class="col-md-6">
-            <img src="img/color-option01.jpg" alt="option1">
-          </div>
-          <div class="col-md-6 text-left justify-content-center align-self-center">
-            <h1 class="mb-5">Choose your style</h1>
-            <h5 class="d-inline">Rose Gold - <h5 class="d-inline" style="color: gray;">$329.<small>99</small></h5></h5>
-            <a href="#" class="btn btn-danger mt-5 mr-3" style="display: block; width: 30%; border-radius: 5%;"><i class="fas fa-shopping-cart"></i> Add to Cart</a>
-          </div>
+              <div class="col-md-6">
+                <div class="tab-content">
+                  <div class="tab-pane active" id="RoseGold"> <img src="img/color-option01.jpg" alt="option1"></div>
+                  <div class="tab-pane" id="Silver"><img src="img/colores/color-option02.jpg" alt=""></div>
+                  <div class="tab-pane" id="gold"><img src="img/colores/color-option03.jpg" alt=""></div>
+                  <div class="tab-pane" id="color4"><img src="img/colores/color-option04.jpg" alt=""></div>
+                  <div class="tab-pane" id="color5"><img src="img/colores/color-option05.jpg" alt=""></div>
+                  <div class="tab-pane" id="color6"><img src="img/colores/color-option06.jpg" alt=""></div>
+                </div>
+              </div>
+              <div class="col-md-6 text-left justify-content-center align-self-center">
+                <h1 class="mb-5">Choose your style</h1>
+                <div id="tab" class="btn-group btn-group-justified" data-toggle="buttons">
+                  <a href="#RoseGold" class="mr-2" data-toggle="tab" id="rdRose" >
+                    <input type="radio" /><span class="btn" style="background: #EBC7EC"></span> 
+                  </a>
+                  <a href="#Silver" class="mr-2" data-toggle="tab">
+                    <input type="radio" /><span style="background: #E5E4E5;" class="btn"></span> 
+                  </a>
+                  <a href="#gold" class="mr-2"  data-toggle="tab">
+                    <input type="radio" /><span style="background: #EFE91D;" class="btn"></span>  
+                  </a>
+                  <a href="#color4" class="mr-2" data-toggle="tab">
+                    <input type="radio" /> <span style="background-image: url(img/colores/color-radio01.png);" class="btn"></span> 
+                  </a>
+                  <a href="#color5" class="mr-2" data-toggle="tab">
+                    <input type="radio" /> <span style="background-image: url(img/colores/color-radio02.png);" class="btn"></span> 
+                  </a>
+                  <a href="#color6" class="mr-2" data-toggle="tab">
+                    <input type="radio" /> <span style="background-image: url(img/colores/color-radio03.png);" class="btn"></span> 
+                  </a>
+                </div>
+                <a href="#" class="btn btn-danger mt-5 mr-3" style="display: block; width: 30%; border-radius: 5%;" id="buttonCart"><i class="fas fa-shopping-cart"></i> Add to Cart</a>
+              </div>
+            </div>
         </div>
       </div>      
     </section>
@@ -291,9 +320,101 @@
     </section>
     <!-- Customers Review -->
     <div class="pt-5" id="mainCustom">
-      <div class="container pt-3">
+      <div class="container pt-3 pb-5">
         <h2 class="text-center pb-3">Customer Reviews</h2>
-        
+        <div id="carouselExampleControls" class="carousel slide pb-5" data-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="container">
+                <div class="row">
+                  <div class="col-md-4">
+                    <div class="card text-center border-secondary">
+                      <div class="card-body">
+                        <h3>Feature One</h3>     
+                        <p>
+                          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni iste molestiae quo ducimus et, voluptate nihil quisquam asperiores amet impedit perferendis officia dolorum atque qui dolorem aut eveniet modi cupiditate? 
+                        </p>
+                        <img src="img/colores/01.jpg" alt="">
+                      </div>
+                    </div>
+                    
+                  </div>
+                  <div class="col-md-4">
+                    <div class="card text-center border-secondary">
+                      <div class="card-body">
+                        <h3>Feature One</h3>
+                        <p>
+                          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni iste molestiae quo ducimus et, voluptate nihil quisquam asperiores amet impedit perferendis officia dolorum atque qui dolorem aut eveniet modi cupiditate? 
+                        </p>
+                        <img src="img/colores/04.jpg" alt="">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="card text-center 
+                    border-secondary">
+                      <div class="card-body">
+                        <h3>Feature Two</h3>
+                        <p>
+                          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni iste molestiae quo ducimus et, voluptate nihil quisquam asperiores amet impedit perferendis officia dolorum atque qui dolorem aut eveniet modi cupiditate?
+                        </p>
+                        <img src="img/colores/02.jpg" alt="">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="container">
+                <div class="row">
+                  <div class="col-md-4">
+                    <div class="card text-center border-secondary">
+                      <div class="card-body">
+                        <h3>Feature One</h3>
+                        <p>
+                          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni iste molestiae quo ducimus et, voluptate nihil quisquam asperiores amet impedit perferendis officia dolorum atque qui dolorem aut eveniet modi cupiditate?
+                        </p>
+                        <img src="img/colores/03.jpg" alt="">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="card text-center border-secondary">
+                      <div class="card-body">
+                        <h3>Feature One</h3>
+                        <p>
+                          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni iste molestiae quo ducimus et, voluptate nihil quisquam asperiores amet impedit perferendis officia dolorum atque qui dolorem aut eveniet modi cupiditate?
+                        </p>
+                        <img src="img/colores/02.jpg" alt="">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="card text-center 
+                    border-secondary">
+                      <div class="card-body">
+                        <h3>Feature Two</h3>
+                        <p>
+                          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni iste molestiae quo ducimus et, voluptate nihil quisquam asperiores amet impedit perferendis officia dolorum atque qui dolorem aut eveniet modi cupiditate? 
+                        </p>
+                        <img src="img/colores/04.jpg" alt="">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
       </div>
     </div>
     <!-- You may also like -->
@@ -353,6 +474,9 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/ca1c9de29d.js" crossorigin="anonymous"></script>
+    <script src="alertifyjs (1)/jquery-3.5.0.min.js"></script>
+    <script src="alertifyjs (1)/alertify.js"></script>
+    <script src="main.js"></script>
 
 </body>
 </html>
