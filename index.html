@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="css/main.css">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <!-- Alertify -->
+    <link rel="stylesheet" href="alertifyjs (1)/css/alertify.css">
+    <link rel="stylesheet" href="alertifyjs (1)/css/themes/default.css">
+</head>
+<body>
+
+    <!-- NAV -->
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: black;">
+      <div class="container"><a class="navbar-brand d-none d-sm-block mr-4 order-lg-1" href="index.html" style="min-width: 7rem;"><img width="142" src="img/logo-light.png" alt="Cartzilla"></a>
+        <div class="navbar-toolbar d-flex align-items-center order-lg-3">
+          <button class="navbar-toggler mr-2" type="button" data-toggle="collapse" data-target="#navbarCollapse"><span class="navbar-toggler-icon"></span></button>
+          <a href="#" class="btn btn-outline-dark nav-link mr-2"><i class="far fa-user"></i></a>
+          <div class="navbar-tool dropdown ml-3"><a href="#" class="btn btn-outline-dark nav-link active"><i class="fas fa-shopping-cart"></i></a>
+          </div>
+        </div>
+        <div class="collapse navbar-collapse mr-auto order-lg-2" id="navbarCollapse">
+          <!-- Models dropdown-->
+          <ul class="navbar-nav mega-nav ml-lg-4 pr-lg-2 mr-lg-2">
+            <li class="nav-item dropdown pr-1" style="border-right: 1px solid darkgray;"><a class="nav-link dropdown pl-0" href="#" data-toggle="dropdown"><i class="fas fa-border-all mr-1"></i>Models</a>
+              <div class="dropdown-menu px-2 pl-0 pb-4">
+                <div class="d-flex flex-wrap flex-md-nowrap">
+                  <div class="mega-dropdown-column pt-4 px-3">
+                    <div class="widget mb-2"><a class="d-block mb-3" href="#"><img src="img/gallery/demos/01.jpg"  style="width: 200px;" alt="Model image"></a>
+                      <h6 class="font-size-base text-center mb-2">Solo Headphones</h6>
+                    </div>
+                  </div>
+                  <div class="mega-dropdown-column pt-4 px-3">
+                    <div class="widget mb-2"><a class="d-block mb-3" href="#"><img src="img/gallery/demos/02.jpg" alt="Model image" style="width: 200px;"></a>
+                      <h6 class="font-size-base text-center mb-2">Air Earphones</h6>
+                    </div>
+                  </div>
+                  <div class="mega-dropdown-column pt-4 px-3">
+                    <div class="widget mb-2"><a class="d-block mb-3" href="#"><img src="img/gallery/demos/03.jpg" alt="Model image" style="width: 200px;"0></a>
+                      <h6 class="font-size-base text-center mb-2">Headphones Pro</h6>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+          <!-- Primary menu-->
+          <ul class="navbar-nav">
+            <li class="nav-item dropdown active"><a class="nav-link dropdown" href="#" data-toggle="dropdown">Home</a>
+              <ul class="dropdown-menu">
+                <li class="dropdown position-static mb-0"><a class="dropdown-item py-2 border-bottom" href="#"><span class="d-block text-heading">Fashion Store v.1</span><small class="d-block text-muted">Classic shop layout</small></a>
+                </li>
+                <li class="dropdown position-static mb-0"><a class="dropdown-item py-2 border-bottom" href="#"><span class="d-block text-heading">Fashion Store v.2</span><small class="d-block text-muted">Slider + Featured categories</small></a>
+                </li>
+                <li class="dropdown position-static mb-0"><a class="dropdown-item py-2 border-bottom" href="home-electronics-store.html"><span class="d-block text-heading">Electronics Store</span><small class="d-block text-muted">Slider + Promo banners</small></a>
+                </li>
+                <li class="dropdown position-static mb-0"><a class="dropdown-item py-2 border-bottom" href="home-marketplace.html"><span class="d-block text-heading">Marketplace</span><small class="d-block text-muted">Multi-vendor, digital goods</small></a>
+
+                </li>
+                <li class="dropdown position-static mb-0"><a class="dropdown-item py-2 border-bottom" href="#"><span class="d-block text-heading">Single Product Store</span><small class="d-block text-muted">Single product / mono brand</small></a>
+                </li>
+                <li class="dropdown position-static mb-0"><a class="dropdown-item py-2" href="#"><span class="d-block text-heading">Grocery Store</span><small class="d-block text-muted">Full width + Side menu</small></a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown"><a class="nav-link dropdown" href="#" data-toggle="dropdown">Shop</a>
+              <div class="dropdown-menu p-0">
+                <div class="d-flex flex-wrap flex-md-nowrap px-2">
+                  <div class="mega-dropdown-column py-4 px-3">
+                    <div class="widget widget-links mb-3">
+                      <h6 class="font-size-base mb-3">Shop layouts</h6>
+                      <ul class="widget-list" id="shopNav">
+                        <li class="widget-list-item pb-1"><a class="widget-list-link" href="#">Shop Grid - Left Sidebar</a></li>
+                        <li class="widget-list-item pb-1"><a class="widget-list-link" href="#">Shop Grid - Right Sidebar</a></li>
+                        <li class="widget-list-item pb-1"><a class="widget-list-link" href="#">Shop Grid - Filters on Top</a></li>
+                        <li class="widget-list-item pb-1"><a class="widget-list-link" href="#">Shop List - Left Sidebar</a></li>
+                        <li class="widget-list-item pb-1"><a class="widget-list-link" href="#">Shop List - Right Sidebar</a></li>
+                        <li class="widget-list-item pb-1"><a class="widget-list-link" href="#">Shop List - Filters on Top</a></li>
+                      </ul>
+                    </div>
+                    <div class="widget widget-links">
+                      <h6 class="font-size-base mb-3">Marketplace</h6>
+                      <ul class="widget-list" id="shopNav">
+                        <li class="widget-list-item pb-1"><a class="widget-list-link" href="#">Category Page</a></li>
+                        <li class="widget-list-item pb-1"><a class="widget-list-link" href="#">Single Item Page</a></li>
+                        <li class="widget-list-item pb-1"><a class="widget-list-link" href="#">Vendor Page</a></li>
+                        <li class="widget-list-item pb-1"><a class="widget-list-link" href="#">Cart</a></li>
+                        <li class="widget-list-item pb-1"><a class="widget-list-link" href="#">Checkout</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="mega-dropdown-column py-4 px-3">
+                    <div class="widget widget-links">
+                      <h6 class="font-size-base mb-3">Shop pages</h6>
+                      <ul class="widget-list" id="shopNav">
+                        <li class="widget-list-item pb-1"><a class="widget-list-link" href="#">Shop Categories</a></li>
+                        <li class="widget-list-item pb-1"><a class="widget-list-link" href="#">Product Page v.1</a></li>
+                        <li class="widget-list-item pb-1"><a class="widget-list-link" href="#">Product Page v.2</a></li>
+                        <li class="widget-list-item pb-1"><a class="widget-list-link" href="#">Cart</a></li>
+                        <li class="widget-list-item pb-1"><a class="widget-list-link" href="#">Checkout - Details</a></li>
+                        <li class="widget-list-item pb-1"><a class="widget-list-link" href="#">Checkout - Shipping</a></li>
+                        <li class="widget-list-item pb-1"><a class="widget-list-link" href="#">Checkout - Payment</a></li>
+                        <li class="widget-list-item pb-1"><a class="widget-list-link" href="#">Checkout - Review</a></li>
+                        <li class="widget-list-item pb-1"><a class="widget-list-link" href="#">Checkout - Complete</a></li>
+                        <li class="widget-list-item pb-1"><a class="widget-list-link" href="#">Order Tracking</a></li>
+                        <li class="widget-list-item pb-1"><a class="widget-list-link" href="#">Product Comparison</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="mega-dropdown-column py-4 pr-3">
+                    <div class="widget widget-links mb-3">
+                      <h6 class="font-size-base mb-3">Grocery store</h6>
+                      <ul class="widget-list" id="shopNav">
+                        <li class="widget-list-item pb-1"><a class="widget-list-link" href="#">Product Catalog</a></li>
+                        <li class="widget-list-item pb-1"><a class="widget-list-link" href="#">Single Product Page</a></li>
+                        <li class="widget-list-item pb-1"><a class="widget-list-link" href="#">Checkout</a></li>
+                      </ul>
+                    </div><a class="d-block" href="#"><img src="img/gallery/menu-banner.jpg" class="" style="width: 200px;" alt="Promo banner"></a>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="nav-item dropdown"><a class="nav-link dropdown" href="#" data-toggle="dropdown">Account</a>
+              <ul class="dropdown-menu">
+                <li class="dropdown"><a class="dropdown-item dropdown-toggle" href="#" data-toggle="dropdown">Shop User Account</a>
+                </li>
+                <li class="dropdown"><a class="dropdown-item dropdown-toggle" href="#" data-toggle="dropdown">Vendor Dashboard</a>
+                </li>
+                <li><a class="dropdown-item" href="account-signin.html">Sign In / Sign Up</a></li>
+                <li><a class="dropdown-item" href="#">Password Recovery</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown"><a class="nav-link dropdown" href="#" data-toggle="dropdown">Pages</a>
+              <ul class="dropdown-menu">
+                <li class="dropdown"><a class="dropdown-item dropdown-toggle" href="#" data-toggle="dropdown">Navbar Variants</a>
+                </li>
+                <li class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="about.html">About Us</a></li>
+                <li><a class="dropdown-item" href="contacts.html">Contacts</a></li>
+                <li class="dropdown"><a class="dropdown-item dropdown-toggle" href="#" data-toggle="dropdown">Help Center</a>
+                </li>
+                <li class="dropdown"><a class="dropdown-item dropdown-toggle" href="#" data-toggle="dropdown">404 Not Found</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown"><a class="nav-link dropdown" href="#" data-toggle="dropdown">Blog</a>
+              <ul class="dropdown-menu">
+                <li class="dropdown"><a class="dropdown-item dropdown-toggle" href="#" data-toggle="dropdown">Blog List Layouts</a>
+                </li>
+                <li class="dropdown"><a class="dropdown-item dropdown-toggle" href="#" data-toggle="dropdown">Blog Grid Layouts</a>
+                </li>
+                <li><a class="dropdown-item" href="#">Single Post</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown"><a class="nav-link dropdown" href="#" data-toggle="dropdown">Docs / Components</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#"">
+                    <div class="d-flex">
+                      <div class="lead text-muted pt-1"><i class="czi-book"></i></div>
+                      <div class="ml-2"><span class="d-block text-heading">Documentation</span><small class="d-block text-muted">Kick-start customization</small></div>
+                    </div></a></li>
+                <li class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#">
+                    <div class="d-flex">
+                      <div class="lead text-muted pt-1"><i class="czi-server"></i></div>
+                      <div class="ml-2"><span class="d-block text-heading">Components<span class="badge badge-info ml-2">40+</span></span><small class="d-block text-muted">Faster page building</small></div>
+                    </div></a></li>
+                <li class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#">
+                    <div class="d-flex">
+                      <div class="lead text-muted pt-1"><i class="czi-edit"></i></div>
+                      <div class="ml-2"><span class="d-block text-heading">Changelog<span class="badge badge-success ml-2">v1.3</span></span><small class="d-block text-muted">Regular updates</small></div>
+                    </div></a></li>
+                <li class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="mailto:contact@createx.studio">
+                    <div class="d-flex">
+                      <div class="lead text-muted pt-1"><i class="czi-help"></i></div>
+                      <div class="ml-2"><span class="d-block text-heading">Support</span><small class="d-block text-muted">contact@createx.studio</small></div>
+                    </div></a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- HEADER -->
+    <header class="main-header">
+        <div class="container">
+          <div class="row" style="height: 100%; width: 100%;">
+            <div id="colf-left" class="col-md-5 text-white justify-content-center align-self-center">
+              <h6>Wireless Bluetooth Headphones</h6>
+              <h1>Enjoy the music like never before</h1>
+              <hr>
+              <a href="#" class="btn btn-danger d-inline mr-3 AddPrize" id="btnAdd"><i class="fas fa-shopping-cart"></i> Add to Cart</a>
+              <p class="d-inline"><span id="prize">$329.</span><span id="prize2">99</span></p>
+              <ul class="list-unstyled text-light mb-0 mt-5">
+                <li class="d-flex mb-2"><i class="fas fa-wifi"></i>
+                  <div class="pl-3">
+                  Wireless connection
+                </div></li>
+                <li class="d-flex mb-2"><i class="fas fa-volume-up"></i>
+                  <div class="pl-3">
+                  Best in class sound
+                </div></li>
+                <li class="d-flex"><i class="fas fa-battery-full"></i>
+                  <div class="pl-3">
+                  Up to 40 hours battery life
+                </div></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+    </header>
+    <!-- Section -->
+    <section class="main-section py-5">
+      <div class="container">
+        <div class="row">
+              <div class="col-md-6">
+                <div class="tab-content">
+                  <div class="tab-pane active" id="RoseGold"> <img src="img/color-option01.jpg" alt="option1"></div>
+                  <div class="tab-pane" id="Silver"><img src="img/colores/color-option02.jpg" alt=""></div>
+                  <div class="tab-pane" id="gold"><img src="img/colores/color-option03.jpg" alt=""></div>
+                  <div class="tab-pane" id="color4"><img src="img/colores/color-option04.jpg" alt=""></div>
+                  <div class="tab-pane" id="color5"><img src="img/colores/color-option05.jpg" alt=""></div>
+                  <div class="tab-pane" id="color6"><img src="img/colores/color-option06.jpg" alt=""></div>
+                </div>
+              </div>
+              <div class="col-md-6 text-left justify-content-center align-self-center">
+                <h1 class="mb-5">Choose your style</h1>
+                <div id="tab" class="btn-group btn-group-justified" data-toggle="buttons">
+                  <a href="#RoseGold" class="mr-2" data-toggle="tab" id="rdRose" >
+                    <input type="radio" /><span class="btn" style="background: #EBC7EC"></span> 
+                  </a>
+                  <a href="#Silver" class="mr-2" data-toggle="tab">
+                    <input type="radio" /><span style="background: #E5E4E5;" class="btn"></span> 
+                  </a>
+                  <a href="#gold" class="mr-2"  data-toggle="tab">
+                    <input type="radio" /><span style="background: #EFE91D;" class="btn"></span>  
+                  </a>
+                  <a href="#color4" class="mr-2" data-toggle="tab">
+                    <input type="radio" /> <span style="background-image: url(img/colores/color-radio01.png);" class="btn"></span> 
+                  </a>
+                  <a href="#color5" class="mr-2" data-toggle="tab">
+                    <input type="radio" /> <span style="background-image: url(img/colores/color-radio02.png);" class="btn"></span> 
+                  </a>
+                  <a href="#color6" class="mr-2" data-toggle="tab">
+                    <input type="radio" /> <span style="background-image: url(img/colores/color-radio03.png);" class="btn"></span> 
+                  </a>
+                </div>
+                <a href="#" class="btn btn-danger mt-5 mr-3" style="display: block; width: 30%; border-radius: 5%;" id="buttonCart"><i class="fas fa-shopping-cart"></i> Add to Cart</a>
+              </div>
+            </div>
+        </div>
+      </div>      
+    </section>
+    <hr>
+    <!-- Product Section  -->
+    <section>
+      <div class="container">
+        <h2 class="text-center mt-5">Product Gallery</h2>
+        <div class="row mb-5">
+          <div class="col-md-4  col-sm-6 align-self-center">
+            <img src="img/gallery/01.jpg" class="img">
+          </div>  
+          <div class="col-md-4 col-sm-6 align-self-center">
+            <img src="img/gallery/th02.jpg" class="img">
+          </div>
+          <div class="col-md-4 col-sm-6 align-self-center">
+            <img src="img/gallery/th03.jpg" class="img">
+          </div>
+          <div class="col-md-4 col-sm-6 align-self-center">
+            <img src="img/gallery/th04.jpg" class="img">
+          </div>  
+          <div class="col-md-4 col-sm-6 align-self-center">
+            <img src="img/gallery/05.jpg" class="img">
+          </div>
+          <div class="col-md-4 col-sm-6 align-self-center">
+            <img src="img/gallery/06.jpg" class="img">
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Detail Section -->
+    <section class="container py-4 py-md-5 my-2">
+      <h2 class="text-center mb-4 mb-md-5 pb-2">Product details</h2>
+      <div class="row text-center text-sm-left">
+        <div class="col-lg-5 col-md-6 col-sm-8 offset-lg-2 offset-md-1">
+          <h5 class="mb-3">Highlights</h5>
+          <p class="font-size-sm mb-3 mb-lg-4 pb-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit animasurel. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          <h5 class="mb-3">Battery</h5>
+          <ul class="list-unstyled font-size-sm mb-3 mb-lg-4 pb-1">
+            <li>Up to 40 hours life</li>
+            <li>Fast charging technology</li>
+            <li>Charge via Micro-USB cable</li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-4 offset-md-1">
+          <h5 class="mb-3">General</h5>
+          <ul class="list-unstyled font-size-sm mb-3 mb-lg-4 pb-1">
+            <li>Height: 7.8 in / 19.8 cm</li>
+            <li>Weight: 7.58 oz / 215 g</li>
+            <li>Form factor: On ear</li>
+          </ul>
+          <h5 class="mb-3">Connectivity</h5>
+          <ul class="list-unstyled font-size-sm mb-3 mb-lg-4 pb-1">
+            <li>Wireless Bluetooth</li>
+            <li>Micro-USD port</li>
+          </ul>
+          <h5 class="mb-3">Other features</h5>
+          <ul class="list-unstyled font-size-sm mb-3 mb-lg-4 pb-1">
+            <li>Lightweight</li>
+            <li>Durable materials</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <!-- Customers Review -->
+    <div class="pt-5" id="mainCustom">
+      <div class="container pt-3 pb-5">
+        <h2 class="text-center pb-3">Customer Reviews</h2>
+        <div id="carouselExampleControls" class="carousel slide pb-5" data-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="container">
+                <div class="row">
+                  <div class="col-md-4">
+                    <div class="card text-center border-secondary">
+                      <div class="card-body">
+                        <h3>Feature One</h3>     
+                        <p>
+                          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni iste molestiae quo ducimus et, voluptate nihil quisquam asperiores amet impedit perferendis officia dolorum atque qui dolorem aut eveniet modi cupiditate? 
+                        </p>
+                        <img src="img/colores/01.jpg" alt="">
+                      </div>
+                    </div>
+                    
+                  </div>
+                  <div class="col-md-4">
+                    <div class="card text-center border-secondary">
+                      <div class="card-body">
+                        <h3>Feature One</h3>
+                        <p>
+                          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni iste molestiae quo ducimus et, voluptate nihil quisquam asperiores amet impedit perferendis officia dolorum atque qui dolorem aut eveniet modi cupiditate? 
+                        </p>
+                        <img src="img/colores/04.jpg" alt="">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="card text-center 
+                    border-secondary">
+                      <div class="card-body">
+                        <h3>Feature Two</h3>
+                        <p>
+                          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni iste molestiae quo ducimus et, voluptate nihil quisquam asperiores amet impedit perferendis officia dolorum atque qui dolorem aut eveniet modi cupiditate?
+                        </p>
+                        <img src="img/colores/02.jpg" alt="">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="container">
+                <div class="row">
+                  <div class="col-md-4">
+                    <div class="card text-center border-secondary">
+                      <div class="card-body">
+                        <h3>Feature One</h3>
+                        <p>
+                          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni iste molestiae quo ducimus et, voluptate nihil quisquam asperiores amet impedit perferendis officia dolorum atque qui dolorem aut eveniet modi cupiditate?
+                        </p>
+                        <img src="img/colores/03.jpg" alt="">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="card text-center border-secondary">
+                      <div class="card-body">
+                        <h3>Feature One</h3>
+                        <p>
+                          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni iste molestiae quo ducimus et, voluptate nihil quisquam asperiores amet impedit perferendis officia dolorum atque qui dolorem aut eveniet modi cupiditate?
+                        </p>
+                        <img src="img/colores/02.jpg" alt="">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="card text-center 
+                    border-secondary">
+                      <div class="card-body">
+                        <h3>Feature Two</h3>
+                        <p>
+                          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni iste molestiae quo ducimus et, voluptate nihil quisquam asperiores amet impedit perferendis officia dolorum atque qui dolorem aut eveniet modi cupiditate? 
+                        </p>
+                        <img src="img/colores/04.jpg" alt="">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+      </div>
+    </div>
+    <!-- You may also like -->
+    
+    <!-- Footer -->
+    <footer class="bg-dark pt-5">
+      <div class="container pt-5">
+        <div class="row">
+          <div class="col-lg-2 col-md-4 text-white">
+            <h4>Cartzilla</h4>
+          </div>
+          <div class="col-lg-2 col-md-4 text-white">
+            <h5>Products</h5>
+            <ul class="list-unstyled font-size-sm mb-3 mb-lg-4 pb-1" id="ListFooter">
+              <li><a href="" style="text-decoration: none;">Headphones</a></li>
+              <li><a href="" style="text-decoration: none;" >Earphones</a></li>
+              <li><a href="" style="text-decoration: none;">Speakers</a></li>
+              <li><a href="" style="text-decoration: none;">Accesories</a></li>
+              <li><a href="" style="text-decoration: none;">Special Offers</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-2 col-md-4 text-white">
+            <h5>For customers</h5>
+            <ul class="list-unstyled font-size-sm mb-3 mb-lg-4 pb-1" id="ListFooter">
+              <li><a href="" style="text-decoration: none;">Your Account</a></li>
+              <li><a href="" style="text-decoration: none;" >Shipping Rates & Policy</a></li>
+              <li><a href="" style="text-decoration: none;">Refunds & Replacements</a></li>
+              <li><a href="" style="text-decoration: none;">Delivery Info</a></li>
+          </div>
+          <div class="col-lg-2 col-md-4 text-white">
+            <h5>Company</h5>
+            <ul class="list-unstyled font-size-sm mb-3 mb-lg-4 pb-1" id="ListFooter">
+              <li><a href="" style="text-decoration: none;">About Us</a></li>
+              <li><a href="" style="text-decoration: none;" >Contact</a></li>
+              <li><a href="" style="text-decoration: none;">Careers</a></li>
+              <li><a href="" style="text-decoration: none;">Affiliates</a></li>
+              <li><a href="" style="text-decoration: none;">Support</a></li>
+          </div>
+          <div class="col-lg-4 col-md-8">
+            <h5 class="text-white">Stay Informed</h5>
+            <form action="">
+              <div class="input-group input-group-overlay flex-nowrap">
+                <div class="input-group-prepend-overlay"><span class="input-group-text text-muted font-size-base"><i class="far fa-envelope" style="font-size:24px ;"></i></span></div>
+                <input class="form-control prepended-form-control" type="email" name="EMAIL" id="mce-EMAIL" value="" placeholder="Your email" required="">
+                <div class="input-group-append">
+                  <button class="btn btn-danger" type="submit" name="subscribe" >Subscribe</button>
+                </div>
+              </div>
+              <small class="form-text opacity-50" id="text-footer">*Subscribe to our newsletter to receive early discount offers, updates and new products info.</small>
+            </form>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/ca1c9de29d.js" crossorigin="anonymous"></script>
+    <script src="alertifyjs (1)/jquery-3.5.0.min.js"></script>
+    <script src="alertifyjs (1)/alertify.js"></script>
+    <script src="main.js"></script>
+
+</body>
+</html>
