@@ -1,4 +1,4 @@
-#Pagina Web Cartzilla
+# Pagina Web Cartzilla
 
 Pagina web Test de Front end
 
@@ -6,17 +6,16 @@ Pagina web Test de Front end
 
 Puedes apreciar la web final a través de [Página Web](https://samuelantunez.github.io/pagina-web-front-end/)
 
-<img src="img/README/Screenshot_1.jpg" width="900px;"/>
-<img src="img/README/Screenshot_2.jpg" width="900px;"/>
-<img src="img/README/Screenshot_3.jpg" width="900px;"/>
-<img src="img/README/Screenshot_4.jpg" width="900px;"/>
-<img src="img/README/Screenshot_5.jpg" width="900px;"/>
+<img src="img/README/resizer.jpg" width="900px;"/>
+
 ## Herramientas
 
 Para este proyecto se utilizarón las siguientes herramientas
 
 * [Google Fonts](https://fonts.google.com/)
 * [Bootstrap](https://getbootstrap.com/)
+* [Font Awesome](https://fontawesome.com/start)
+* [Alertify](https://alertifyjs.com/)
 
 
 
